@@ -49,7 +49,7 @@ class VisiteurController extends Controller
     public function signin(){
         //Requête qui récupère une images aléatoirement. Elle constituera le background de la page d'accueil.
         $image = DB::table('series')->whereNotNull('backdrop_path')->inRandomOrder()->first();
-        //Appel de la vue propos qui utilisera l'image aléatoire pour son background.
+        //Appel de la vue inscription qui utilisera l'image aléatoire pour son background.
         return view('inscription')->with('image', $image);
     }
 

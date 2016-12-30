@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ConnectedController extends Controller
 {
@@ -12,6 +12,9 @@ class ConnectedController extends Controller
     }
 
     public function account(){
-        echo 'A construire';
+        //Requête qui récupère une images aléatoirement. Elle constituera le background de la page d'accueil.
+        $image = DB::table('series')->whereNotNull('backdrop_path')->inRandomOrder()->first();
+        //Appel de la vue account qui utilisera l'image aléatoire pour son background.
+        return view('account')->with('image', $image);
     }
 }
