@@ -51,12 +51,11 @@ $(document).ready(function() {
       interval: 8000 
     });
 
-    /* ======= Construct of search form on serie's page ======= */
+    /* ======= Construit la page de recherche de séries du site ======= */
     //La recherche par défaut se fait par le nom des séries donc on ne rends visible que ce champ.
     $('.nom').show();
     $('.realisateur').hide();
     $('.genre').hide();
-    $('.acteur').hide();
 
     //Cette fonction permet de changer le champ de recherche en fonction du type sélectionné
     $( ".recherche" ).change(function() {
@@ -65,28 +64,18 @@ $(document).ready(function() {
             $('.nom').show();
             $('.genre').hide();
             $('.realisateur').hide();
-            $('.acteur').hide();
         }
         //Si le type de recherche est : par genre
         if($(this).val() == 'G'){
             $('.genre').show();
             $('.nom').hide();
             $('.realisateur').hide();
-            $('.acteur').hide();
         }
         //Si le type de recherche est : par réalisateur
         if($(this).val() == 'R'){
             $('.realisateur').show();
             $('.genre').hide();
             $('.nom').hide();
-            $('.acteur').hide();
-        }
-        //Si le type de recherche est : par acteur
-        if($(this).val() == 'A'){
-            $('.acteur').show();
-            $('.genre').hide();
-            $('.nom').hide();
-            $('.realisateur').hide();
         }
     });
 });

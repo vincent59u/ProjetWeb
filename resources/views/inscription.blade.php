@@ -1,7 +1,5 @@
 <!-- Appel de la barre de navigation commune à tout le site -->
-
-@extends('layouts.app')
-@include('layouts.header_propos')
+@include('layouts.header_inscription')
 
 <!-- Background de la page composé d'une images aléatoire de la base de données -->
 <div class="headline-bg" style="background-image: url('https://image.tmdb.org/t/p/original<?php echo $image->backdrop_path ?>');">
@@ -12,7 +10,6 @@
     <h2 class="title container text-center">Inscription</h2>
     <div class="story-container container text-center">
         <div class="story-container-inner">
-
             <div class="panel panel-default">
                 <div class="panel-heading">Inscription</div>
                 <div class="panel-body">
@@ -80,9 +77,6 @@
                         </form>
                 </div>
             </div>
-        </div>
-
-
         </div>
     </div>
 </section><!-- Fin de du contenu de la page -->

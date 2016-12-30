@@ -9,25 +9,29 @@
 <section class="story-section section section-on-bg">
     <h2 class="title container text-center">Recherche de séries</h2>
     <div class="story-container container text-center">
-        <div class="story-container-inner">
+                <div class="story-container-inner">
             <!-- Description et contenu textuel de la page -->
 
             <!-- Ouverture du formulaire de recherche de série -->
             {!! Form::open() !!}
 
-            @if(Session::has('message'))
-                <div class="alert alert-success">
-                    {{Session::get('message')}}
+            <!-- Div qui permet d'afficher les erreur de validation de formulaire lorsqu'il y en a -->
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
-                @endif
+            @endif
 
             <!-- Choix du type de recherche de série -->
             <div class="form-group">
                 <center>{!! Form::label('Type de recherche') !!}</center>
                 {!! Form::select('recherche', ['N' => 'Recherche par nom',
                                                'G' => 'Recherche par genre',
-                                               'R' => 'Recherche par réalisateur',
-                                               'A' => 'Recherche par acteur'],
+                                               'R' => 'Recherche par réalisateur'],
                 'N', ['class' => 'recherche select']); !!}
             </div>
 
@@ -41,45 +45,45 @@
             <div class="form-group genre">
                 <center>{!! Form::label('Nom du genre recherché') !!}</center>
                 <div class="row">
-                    <div class="col-md-3">Adventure {!! Form::checkbox('Adventure', 'Adventure') !!}</div>
-                    <div class="col-md-3">Fantasy {!! Form::checkbox('Fantasy', 'Fantasy') !!}</div>
-                    <div class="col-md-3">Animation {!! Form::checkbox('Animation', 'Animation') !!}</div>
-                    <div class="col-md-3">Drama {!! Form::checkbox('Drama', 'Drama') !!}</div>
+                    <div class="col-md-3">Adventure {!! Form::checkbox('genre[]', 'Adventure') !!}</div>
+                    <div class="col-md-3">Fantasy {!! Form::checkbox('genre[]', 'Fantasy') !!}</div>
+                    <div class="col-md-3">Animation {!! Form::checkbox('genre[]', 'Animation') !!}</div>
+                    <div class="col-md-3">Drama {!! Form::checkbox('genre[]', 'Drama') !!}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Comedy {!! Form::checkbox('Comedy', 'Comedy') !!}</div>
-                    <div class="col-md-3">History {!! Form::checkbox('History', 'History') !!}</div>
-                    <div class="col-md-3">Western {!! Form::checkbox('Western', 'Western') !!}</div>
-                    <div class="col-md-3">Thriller {!! Form::checkbox('Thriller', 'Thriller') !!}</div>
+                    <div class="col-md-3">Comedy {!! Form::checkbox('genre[]', 'Comedy') !!}</div>
+                    <div class="col-md-3">History {!! Form::checkbox('genre[]', 'History') !!}</div>
+                    <div class="col-md-3">Western {!! Form::checkbox('genre[]', 'Western') !!}</div>
+                    <div class="col-md-3">Thriller {!! Form::checkbox('genre[]', 'Thriller') !!}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Science Fiction {!! Form::checkbox('Science Fiction', 'Science Fiction') !!}</div>
-                    <div class="col-md-3">Mystery {!! Form::checkbox('Mystery', 'Mystery') !!}</div>
-                    <div class="col-md-3">Music {!! Form::checkbox('Music', 'Music') !!}</div>
-                    <div class="col-md-3">Romance {!! Form::checkbox('Romance', 'Romance') !!}</div>
+                    <div class="col-md-3">Science Fiction {!! Form::checkbox('genre[]', 'Science Fiction') !!}</div>
+                    <div class="col-md-3">Mystery {!! Form::checkbox('genre[]', 'Mystery') !!}</div>
+                    <div class="col-md-3">Music {!! Form::checkbox('genre[]', 'Music') !!}</div>
+                    <div class="col-md-3">Romance {!! Form::checkbox('genre[]', 'Romance') !!}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Action & Adventure {!! Form::checkbox('Action & Adventure', 'Action & Adventure') !!}</div>
-                    <div class="col-md-3">Kids {!! Form::checkbox('Kids', 'Kids') !!}</div>
-                    <div class="col-md-3">News {!! Form::checkbox('News', 'News') !!}</div>
-                    <div class="col-md-3">Reality {!! Form::checkbox('Reality', 'Reality') !!}</div>
+                    <div class="col-md-3">Action & Adventure {!! Form::checkbox('genre[]', 'Action & Adventure') !!}</div>
+                    <div class="col-md-3">Kids {!! Form::checkbox('genre[]', 'Kids') !!}</div>
+                    <div class="col-md-3">News {!! Form::checkbox('genre[]', 'News') !!}</div>
+                    <div class="col-md-3">Reality {!! Form::checkbox('genre[]', 'Reality') !!}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Talk {!! Form::checkbox('Talk', 'Talk') !!}</div>
-                    <div class="col-md-3">War & Politics {!! Form::checkbox('War & Politics', 'War & Politics') !!}</div>
-                    <div class="col-md-3">TV Movie {!! Form::checkbox('TV Movie', 'TV Movie') !!}</div>
-                    <div class="col-md-3">Sci-Fi & Fantasy {!! Form::checkbox('Sci-Fi & Fantasy', 'Sci-Fi & Fantasy') !!}</div>
+                    <div class="col-md-3">Talk {!! Form::checkbox('genre[]', 'Talk') !!}</div>
+                    <div class="col-md-3">War & Politics {!! Form::checkbox('genre[]', 'War & Politics') !!}</div>
+                    <div class="col-md-3">TV Movie {!! Form::checkbox('genre[]', 'TV Movie') !!}</div>
+                    <div class="col-md-3">Sci-Fi & Fantasy {!! Form::checkbox('genre[]', 'Sci-Fi & Fantasy') !!}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Soap {!! Form::checkbox('Soap', 'Soap') !!}</div>
-                    <div class="col-md-3">Family {!! Form::checkbox('Family', 'Family') !!}</div>
-                    <div class="col-md-3">War {!! Form::checkbox('War', 'War') !!}</div>
-                    <div class="col-md-3">Crime {!! Form::checkbox('Crime', 'Crime') !!}</div>
+                    <div class="col-md-3">Soap {!! Form::checkbox('genre[]', 'Soap') !!}</div>
+                    <div class="col-md-3">Family {!! Form::checkbox('genre[]', 'Family') !!}</div>
+                    <div class="col-md-3">War {!! Form::checkbox('genre[]', 'War') !!}</div>
+                    <div class="col-md-3">Crime {!! Form::checkbox('genre[]', 'Crime') !!}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">Documentary {!! Form::checkbox('Documentary', 'Documentary') !!}</div>
-                    <div class="col-md-3">Horror {!! Form::checkbox('Horror', 'Horror') !!}</div>
-                    <div class="col-md-3">Action {!! Form::checkbox('Action', 'Action') !!}</div>
+                    <div class="col-md-3">Documentary {!! Form::checkbox('genre[]', 'Documentary') !!}</div>
+                    <div class="col-md-3">Horror {!! Form::checkbox('genre[]', 'Horror') !!}</div>
+                    <div class="col-md-3">Action {!! Form::checkbox('genre[]', 'Action') !!}</div>
                 </div>
             </div>
 
@@ -87,12 +91,6 @@
             <div class="form-group realisateur">
                 <center>{!! Form::label('Nom du réalisateur recherché') !!}</center>
                 {!! Form::text('realisateur', null, array('required', 'class'=>'form-control', 'placeholder'=>'Nom du réalisateur')) !!}
-            </div>
-
-            <!-- Champ de saisie du nom d'un acteur de la série recherchée -->
-            <div class="form-group acteur">
-                <center>{!! Form::label("Nom de l'acteur recherché") !!}</center>
-                {!! Form::text('acteur', null, array('required', 'class'=>'form-control', 'placeholder'=>"Nom de l'acteur")) !!}
             </div>
 
             <!-- Choix du nombre de résultats retournés -->
