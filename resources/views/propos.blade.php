@@ -7,7 +7,7 @@
 
 <!-- Contenu de la page à propos -->
 <section class="story-section section section-on-bg">
-    <h2 class="title container text-center">A propos</h2>
+    <h2 class="title container text-center">About us</h2>
     <div class="story-container container text-center">
         <div class="story-container-inner">
             <!-- Description et contenu textuel de la page -->
@@ -18,7 +18,7 @@
             </div>
             <!-- Partie de présentation de l'équipe -->
             <div class="team row">
-                <h3 class="title">Découvrez l'équipe</h3>
+                <h3 class="title">Meet the team</h3>
                 <div class="member col-md-3 col-sm-6 col-xs-12">
                     <!-- Case qui représente un membre de l'equipe -->
                     <div class="member-inner">
@@ -27,7 +27,7 @@
                             <figcaption class="info">
                                 <span class="name">Matthieu VINCENT</span>
                                 <br />
-                                <span class="job-title">Dévellopeur</span>
+                                <span class="job-title">Developer</span>
                             </figcaption>
                         </figure>
                     </div>
@@ -37,7 +37,7 @@
                     <div class="member-inner">
                         <figure class="profile">
                             <img class="img-responsive" src="../resources/assets/images/equipe/anonyme.jpeg" alt=""/>
-                            <figcaption class="info"><span class="name">Mervine LIEFFROY</span><br /><span class="job-title">Développeur</span></figcaption>
+                            <figcaption class="info"><span class="name">Mervine LIEFFROY</span><br /><span class="job-title">Developer</span></figcaption>
                         </figure>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     <div class="member-inner">
                         <figure class="profile">
                             <img class="img-responsive" src="../resources/assets/images/equipe/anonyme.jpeg" alt=""/>
-                            <figcaption class="info"><span class="name">Justine SCHMITT</span><br /><span class="job-title">Développeur</span></figcaption>
+                            <figcaption class="info"><span class="name">Justine SCHMITT</span><br /><span class="job-title">Developer</span></figcaption>
                         </figure>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                     <div class="member-inner">
                         <figure class="profile">
                             <img class="img-responsive" src="../resources/assets/images/equipe/anonyme.jpeg" alt=""/>
-                            <figcaption class="info"><span class="name">Raphaël SELSEK</span><br /><span class="job-title">Développeur</span></figcaption>
+                            <figcaption class="info"><span class="name">Raphaël SELSEK</span><br /><span class="job-title">Developer</span></figcaption>
                         </figure>
                     </div>
                 </div>

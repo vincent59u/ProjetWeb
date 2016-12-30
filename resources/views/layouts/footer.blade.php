@@ -4,7 +4,7 @@
         <div class="container">
             <div class="footer-col download col-xs-12 col-md-6">
                 <div class="footer-col-inner">
-                    <h3 class="title">Equipe de développement</h3>
+                    <h3 class="title">Team development</h3>
                     <p class="adr clearfix">
                         <i class="fa fa-map-marker pull-left"></i>
                                 <span class="adr-group pull-left">
@@ -18,13 +18,14 @@
             </div><!--//download-->
             <div class="footer-col contact col-xs-12 col-md-6">
                 <div class="footer-col-inner">
-                    <h3 class="title">Contactez-nous</h3>
+                    <h3 class="title">Contact us</h3>
                     <p class="adr clearfix">
                         <i class="fa fa-map-marker pull-left"></i>
                                 <span class="adr-group pull-left">
                                     <span class="street-address">Pôle lorrain de gestion</span><br>
                                     <span class="region">13 rue Michel Ney</span><br>
                                     <span class="postal-code">54 000 Nancy</span><br>
+                                    <span class="postal-code">France</span><br>
                                 </span>
                     </p>
                 </div><!--//footer-col-inner-->

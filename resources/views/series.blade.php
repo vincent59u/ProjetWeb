@@ -7,7 +7,7 @@
 
 <!-- Contenu de la page à propos -->
 <section class="story-section section section-on-bg">
-    <h2 class="title container text-center">Recherche de séries</h2>
+    <h2 class="title container text-center">Search for series</h2>
     <div class="story-container container text-center">
                 <div class="story-container-inner">
             <!-- Description et contenu textuel de la page -->
@@ -28,22 +28,22 @@
 
             <!-- Choix du type de recherche de série -->
             <div class="form-group">
-                <center>{!! Form::label('Type de recherche') !!}</center>
-                {!! Form::select('recherche', ['N' => 'Recherche par nom',
-                                               'G' => 'Recherche par genre',
-                                               'R' => 'Recherche par réalisateur'],
+                <center>{!! Form::label('Type of search') !!}</center>
+                {!! Form::select('recherche', ['N' => "By serie's name",
+                                               'G' => "By serie's genre",
+                                               'R' => "By serie's creator"],
                 'N', ['class' => 'recherche select']); !!}
             </div>
 
             <!-- Champ de saisie du nom de la série recherchée -->
             <div class="form-group nom">
-                <center>{!! Form::label('Nom de la série recherchée') !!}</center>
-                {!! Form::text('nom', null, array('required', 'class'=>'form-control', 'placeholder'=>'Nom de la série')) !!}
+                <center>{!! Form::label('Name of the series') !!}</center>
+                {!! Form::text('nom', null, array('required', 'class'=>'form-control', 'placeholder'=>'Name of serie')) !!}
             </div>
 
             <!-- Liste des checkboxs pour la recherche de séries par genre -->
             <div class="form-group genre">
-                <center>{!! Form::label('Nom du genre recherché') !!}</center>
+                <center>{!! Form::label('Name of genre') !!}</center>
                 <div class="row">
                     <div class="col-md-3">Adventure {!! Form::checkbox('genre[]', 'Adventure') !!}</div>
                     <div class="col-md-3">Fantasy {!! Form::checkbox('genre[]', 'Fantasy') !!}</div>
@@ -89,23 +89,23 @@
 
             <!-- Champ de saisie du nom du réalisateur de la série recherchée -->
             <div class="form-group realisateur">
-                <center>{!! Form::label('Nom du réalisateur recherché') !!}</center>
-                {!! Form::text('realisateur', null, array('required', 'class'=>'form-control', 'placeholder'=>'Nom du réalisateur')) !!}
+                <center>{!! Form::label('Name of creator') !!}</center>
+                {!! Form::text('realisateur', null, array('required', 'class'=>'form-control', 'placeholder'=>'Name of creator')) !!}
             </div>
 
             <!-- Choix du nombre de résultats retournés -->
             <div class="form-group">
                 <center>{!! Form::label('Nombre de résultats') !!}</center>
-                {!! Form::select('taille', ['10' => '10 résultats retournés',
-                                               '20' => '20 résultats retournés',
-                                               '50' => '50 résultats retournés',
-                                               '100' => '100 résultats retournés',
-                                               'X' => 'Retourne tous les résultats de la recherche'],
+                {!! Form::select('taille', ['10' => '10 returned results',
+                                               '20' => '20 returned results',
+                                               '50' => '50 returned results',
+                                               '100' => '100 returned results',
+                                               'X' => 'Return all results'],
                 '10', ['class' => 'nbResult select']); !!}
             </div>
 
             <!-- Bouton d'envoi du formulaire de recherche de série -->
-            <center>{!! Form::submit('Rechercher', array('class'=>'btn btn-primary')) !!}</center>
+            <center>{!! Form::submit('Search', array('class'=>'btn btn-primary')) !!}</center>
             <!-- Fermeture du formulaire de recherche de série -->
             {!! Form::close() !!}
         </div>

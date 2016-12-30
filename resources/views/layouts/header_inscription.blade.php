@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="fr" class="ie9"> <![endif]-->
 <!--[if !IE]><!--><html lang="fr"> <!--<![endif]-->
 <head>
-    <title>Séries TV</title>
+    <title>TV Series</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@
 <header id="header" class="header navbar-fixed-top">
     <div class="container">
         <h1 class="logo">
-            <a href="."><span class="text">Séries TV</span></a>
+            <a href="."><span class="text">TV Series</span></a>
         </h1><!--//logo-->
         <nav class="main-nav navbar-right" role="navigation">
             <div class="navbar-header">
@@ -44,11 +44,11 @@
             </div><!--//navbar-header-->
             <div id="navbar-collapse" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item"><a href=".">Accueil</a></li>
-                    <li class="nav-item"><a href="series">Séries</a></li>
-                    <li class="nav-item"><a href="propos">A propos</a></li>
-                    <li class="active nav-item"><a href="inscription">Inscription</a></li>
-                    <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href=".">Connexion</a></li>
+                    <li class="nav-item"><a href=".">Home</a></li>
+                    <li class="nav-item"><a href="series">Series</a></li>
+                    <li class="nav-item"><a href="propos">About us</a></li>
+                    <li class="active nav-item"><a href="inscription">Sign in</a></li>
+                    <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href=".">Log in</a></li>
                 </ul><!--//nav-->
             </div><!--//navabr-collapse-->
         </nav><!--//main-nav-->

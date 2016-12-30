@@ -16,9 +16,9 @@
 <!-- Partie de texte qui se positione au dessus des images background -->
 <section class="promo section section-on-bg">
     <div class="container text-center">
-        <h2 class="title">Découvrez de nouvelles séries<br />toutes basées sur vos préférences!</h2>
-        <p class="intro">Notre site de recommandation de séries TV <br /> vous accompagne dans de nouvelles expériences</p>
-        <p><a class="btn btn-cta btn-cta-primary" href="#why">Decouvrez notre service</a></p>
+        <h2 class="title">Discover new TV series<br />tall based on your preferences!</h2>
+        <p class="intro">Our recommandation website<br />be with you in a new experience</p>
+        <p><a class="btn btn-cta btn-cta-primary" href="#why">Discover us</a></p>
     </div><!--//container-->
 </section><!--//promo-->
 
