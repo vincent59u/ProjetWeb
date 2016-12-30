@@ -38,7 +38,7 @@
             <!-- Champ de saisie du nom de la série recherchée -->
             <div class="form-group name">
                 <center>{!! Form::label('Name of the series') !!}</center>
-                {!! Form::text('name', null, array('required', 'class'=>'form-control', 'placeholder'=>'Name of serie')) !!}
+                {!! Form::text('name', null, array('class'=>'form-control', 'placeholder'=>'Name of serie')) !!}
             </div>
 
             <!-- Liste des checkboxs pour la recherche de séries par genre -->
@@ -90,7 +90,7 @@
             <!-- Champ de saisie du nom du réalisateur de la série recherchée -->
             <div class="form-group creator">
                 <center>{!! Form::label('Name of creator') !!}</center>
-                {!! Form::text('creator', null, array('required', 'class'=>'form-control', 'placeholder'=>'Name of creator')) !!}
+                {!! Form::text('creator', null, array('class'=>'form-control', 'placeholder'=>'Name of creator')) !!}
             </div>
 
             <!-- Choix du nombre de résultats retournés -->

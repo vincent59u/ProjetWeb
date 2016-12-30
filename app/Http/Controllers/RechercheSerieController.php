@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Validator;
-use App\Http\Requests\RechercheSerieValidation;
-use Illuminate\Http\Request;
+use App\Http\Requests\FormValidation;
 use Illuminate\Support\Facades\DB;
 
 class RechercheSerieController extends Controller
@@ -25,9 +24,9 @@ class RechercheSerieController extends Controller
 
     /**
      * Méthode qui permet la validation du formulaire de recherche de serie
-     * @param  RechercheSerieValidation  $request
+     * @param  FormValidation  $request
      */
-    public function store(RechercheSerieValidation $request)
+    public function store(FormValidation $request)
     {
         //Création d'une variable qui permet de tester la conformité du formulaire
         $validator = null;

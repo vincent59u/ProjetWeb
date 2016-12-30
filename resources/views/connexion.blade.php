@@ -14,8 +14,14 @@
                 <div class="panel-heading">Log in</div>
                 <div class="panel-body">
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/authenticate') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
+
+                        @if(Session::has('message-error'))
+                            <div class="alert alert-danger">
+                                {{Session::get('message-error')}}
+                            </div>
+                        @endif
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>

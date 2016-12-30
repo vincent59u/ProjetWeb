@@ -47,8 +47,13 @@
                     <li class="nav-item"><a href=".">Home</a></li>
                     <li class="nav-item"><a href="series">Series</a></li>
                     <li class="nav-item"><a href="about">About us</a></li>
-                    <li class="active nav-item"><a href="signin">Sign in</a></li>
-                    <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="login">Log in</a></li>
+                    @if (Auth::check())
+                        <li class="nav-item"><a href="account">My account</a></li>
+                        <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="logout">Log out</a></li>
+                    @else
+                        <li class="nav-item"><a href="signin">Sign in</a></li>
+                        <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="login">Log in</a></li>
+                    @endif
                 </ul><!--//nav-->
             </div><!--//navabr-collapse-->
         </nav><!--//main-nav-->

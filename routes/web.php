@@ -27,13 +27,16 @@ Route::post('/series', 'RechercheSerieController@store');
 Route::get('/signin', 'VisiteurController@signin');
 
 //Route qui permet d'ajouter un nouvel utilisateur dans la base de données. Cette fonction est appellé lorsque l'URL est '/register'
-Route::post('/registrer', 'Auth\RegisterController@register');
+Route::post('/register', 'Auth\RegisterController@register');
 
 //Route qui permet d'afficher le formulaire de connexion du site. Cette fonction est appellé lorsque l'URL est '/login'
 Route::get('/login', 'VisiteurController@login');
 
-Route::post('/authenticate', 'Auth\LoginController@username');
+//Route qui permet de se connecter au site. Cette fonction est appelé lorsque l'URL est '/login' et que le l'utilisateur post des données.
+Route::post('/login', 'Auth\LoginController@doLogin');
 
-Route::get('/dasboard', function(){
-   echo "connected";
-});
+//Route qui permet de se deconnecter du site. Cette fonction est appelé lorsque l'URL est '/logout'
+Route::get('/logout', 'Auth\LoginController@doLogout');
+
+//Route qui permet d'afficher le compte de l'utilisateur. Cette fonction est appelé lorsque l'URL est '/account'
+Route::get('/account', 'ConnectedController@account');

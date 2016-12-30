@@ -63,4 +63,8 @@ class VisiteurController extends Controller
         //Appel de la vue propos qui utilisera l'image aléatoire pour son background.
         return view('connexion')->with('image', $image);
     }
+
+    public function test(){
+        echo 'test';
+    }
 }
