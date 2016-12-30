@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dasboard';
 
     /**
      * Create a new controller instance.
@@ -35,5 +35,14 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'logout']);
+    }
+
+    /**
+     * Méthode qui permet de faire la connexion en utilisant le pseudo de l'utilisateur
+     * @return string
+     */
+    public function username()
+    {
+        return 'name';
     }
 }

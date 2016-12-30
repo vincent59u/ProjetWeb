@@ -42,10 +42,25 @@ class VisiteurController extends Controller
         return view('propos')->with('image', $image);
     }
 
+    /**
+     * Méthode qui permet d'afficher le formulaire d'inscription du site
+     * @return $this
+     */
     public function signin(){
         //Requête qui récupère une images aléatoirement. Elle constituera le background de la page d'accueil.
         $image = DB::table('series')->whereNotNull('backdrop_path')->inRandomOrder()->first();
         //Appel de la vue propos qui utilisera l'image aléatoire pour son background.
         return view('inscription')->with('image', $image);
+    }
+
+    /**
+     * Méthode qui permet d'afficher le formulaire de connexion au site.
+     * @return $this
+     */
+    public function login(){
+        //Requête qui récupère une images aléatoirement. Elle constituera le background de la page d'accueil.
+        $image = DB::table('series')->whereNotNull('backdrop_path')->inRandomOrder()->first();
+        //Appel de la vue propos qui utilisera l'image aléatoire pour son background.
+        return view('connexion')->with('image', $image);
     }
 }

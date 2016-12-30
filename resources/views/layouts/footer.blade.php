@@ -4,7 +4,7 @@
         <div class="container">
             <div class="footer-col download col-xs-12 col-md-6">
                 <div class="footer-col-inner">
-                    <h3 class="title">Team development</h3>
+                    <h3 class="title">The team</h3>
                     <p class="adr clearfix">
                         <i class="fa fa-map-marker pull-left"></i>
                                 <span class="adr-group pull-left">

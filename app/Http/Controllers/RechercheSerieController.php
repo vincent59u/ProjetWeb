@@ -36,14 +36,14 @@ class RechercheSerieController extends Controller
             //Si le type de recherche est par nom, on test le champ nom
             case 'N' : {
                 $validator = Validator::make($request->all(), [
-                    'nom' => 'required|min:2|max:25',
+                    'name' => 'required|min:2|max:25',
                 ]);
                 break;
             }
             //Si le type de recherche est par realisateur, on test le champ realisateur
             case 'R' : {
                 $validator = Validator::make($request->all(), [
-                    'realisateur' => 'required|min:2|max:25',
+                    'creator' => 'required|min:2|max:25',
                 ]);
                 break;
             }
@@ -65,15 +65,15 @@ class RechercheSerieController extends Controller
             $result = null;
             if($request->recherche == 'N'){
                 //On modifie la requête suivant le nombre de résultats souhaité par l'utilisateur
-                if($request->taille == 'X'){
-                    $result = DB::table('series')->where('name', 'LIKE', '%' . $request->nom . '%')->get();
+                if($request->size == 'X'){
+                    $result = DB::table('series')->where('name', 'LIKE', '%' . $request->name . '%')->get();
                 }else{
-                    $result = DB::table('series')->where('name', 'LIKE', '%' . $request->nom . '%')->limit($request->taille)->get();
+                    $result = DB::table('series')->where('name', 'LIKE', '%' . $request->name . '%')->limit($request->size)->get();
                 }
             }
             if($request->recherche == 'G'){
                 //On modifie la requête suivant le nombre de résultats souhaité par l'utilisateur
-                if($request->taille == 'X'){
+                if($request->size == 'X'){
                     $result = DB::table('series')->join('seriesgenres', 'series.id', '=', 'series_id')
                                                  ->join('genres', 'genre_id', '=', 'genres.id')
                                                  ->where('genres.name', '=', $request->genre)->get();
@@ -81,21 +81,21 @@ class RechercheSerieController extends Controller
                     $result = DB::table('series')->join('seriesgenres', 'series.id', '=', 'series_id')
                                                  ->join('genres', 'genre_id', '=', 'genres.id')
                                                  ->where('genres.name', '=', $request->genre)
-                                                 ->limit($request->taille)->get();
+                                                 ->limit($request->size)->get();
                 }
             }
             if($request->recherche == 'R'){
                 //On modifie la requête suivant le nombre de résultats souhaité par l'utilisateur
-                if($request->taille == 'X'){
+                if($request->size == 'X'){
                     $result = DB::table('series')->join('seriescreators', 'series.id', '=', 'series_id')
                                                  ->join('creators', 'creator_id', '=', 'creators.id')
-                                                 ->where('creators.name', 'LIKE', '%' . $request->realisateur . '%')
+                                                 ->where('creators.name', 'LIKE', '%' . $request->creator . '%')
                                                  ->get();
                 }else{
                     $result = DB::table('series')->join('seriescreators', 'series.id', '=', 'series_id')
                                                  ->join('creators', 'creator_id', '=', 'creators.id')
-                                                 ->where('creators.name', 'LIKE', '%' . $request->realisateur . '%')
-                                                 ->limit($request->taille)->get();
+                                                 ->where('creators.name', 'LIKE', '%' . $request->creator . '%')
+                                                 ->limit($request->size)->get();
                 }
             }
 

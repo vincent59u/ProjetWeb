@@ -29,16 +29,16 @@
             <!-- Choix du type de recherche de série -->
             <div class="form-group">
                 <center>{!! Form::label('Type of search') !!}</center>
-                {!! Form::select('recherche', ['N' => "By serie's name",
+                {!! Form::select('search', ['N' => "By serie's name",
                                                'G' => "By serie's genre",
                                                'R' => "By serie's creator"],
-                'N', ['class' => 'recherche select']); !!}
+                'N', ['class' => 'search select']); !!}
             </div>
 
             <!-- Champ de saisie du nom de la série recherchée -->
-            <div class="form-group nom">
+            <div class="form-group name">
                 <center>{!! Form::label('Name of the series') !!}</center>
-                {!! Form::text('nom', null, array('required', 'class'=>'form-control', 'placeholder'=>'Name of serie')) !!}
+                {!! Form::text('name', null, array('required', 'class'=>'form-control', 'placeholder'=>'Name of serie')) !!}
             </div>
 
             <!-- Liste des checkboxs pour la recherche de séries par genre -->
@@ -88,15 +88,15 @@
             </div>
 
             <!-- Champ de saisie du nom du réalisateur de la série recherchée -->
-            <div class="form-group realisateur">
+            <div class="form-group creator">
                 <center>{!! Form::label('Name of creator') !!}</center>
-                {!! Form::text('realisateur', null, array('required', 'class'=>'form-control', 'placeholder'=>'Name of creator')) !!}
+                {!! Form::text('creator', null, array('required', 'class'=>'form-control', 'placeholder'=>'Name of creator')) !!}
             </div>
 
             <!-- Choix du nombre de résultats retournés -->
             <div class="form-group">
                 <center>{!! Form::label('Nombre de résultats') !!}</center>
-                {!! Form::select('taille', ['10' => '10 returned results',
+                {!! Form::select('size', ['10' => '10 returned results',
                                                '20' => '20 returned results',
                                                '50' => '50 returned results',
                                                '100' => '100 returned results',

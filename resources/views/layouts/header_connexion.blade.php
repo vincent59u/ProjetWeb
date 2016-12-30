@@ -45,10 +45,10 @@
             <div id="navbar-collapse" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="nav-item"><a href=".">Home</a></li>
-                    <li class="active nav-item"><a href="series">Series</a></li>
+                    <li class="nav-item"><a href="series">Series</a></li>
                     <li class="nav-item"><a href="about">About us</a></li>
                     <li class="nav-item"><a href="signin">Sign in</a></li>
-                    <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="login">Log in</a></li>
+                    <li class="active nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="login">Log in</a></li>
                 </ul><!--//nav-->
             </div><!--//navabr-collapse-->
         </nav><!--//main-nav-->

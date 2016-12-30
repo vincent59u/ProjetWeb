@@ -53,29 +53,29 @@ $(document).ready(function() {
 
     /* ======= Construit la page de recherche de séries du site ======= */
     //La recherche par défaut se fait par le nom des séries donc on ne rends visible que ce champ.
-    $('.nom').show();
-    $('.realisateur').hide();
+    $('.name').show();
+    $('.creator').hide();
     $('.genre').hide();
 
     //Cette fonction permet de changer le champ de recherche en fonction du type sélectionné
-    $( ".recherche" ).change(function() {
+    $( ".search" ).change(function() {
         //Si le type de recherche est : par nom
         if($(this).val() == 'N'){
-            $('.nom').show();
+            $('.name').show();
             $('.genre').hide();
-            $('.realisateur').hide();
+            $('.creator').hide();
         }
         //Si le type de recherche est : par genre
         if($(this).val() == 'G'){
             $('.genre').show();
-            $('.nom').hide();
-            $('.realisateur').hide();
+            $('.name').hide();
+            $('.creator').hide();
         }
         //Si le type de recherche est : par réalisateur
         if($(this).val() == 'R'){
-            $('.realisateur').show();
+            $('.creator').show();
             $('.genre').hide();
-            $('.nom').hide();
+            $('.name').hide();
         }
     });
 });

@@ -23,10 +23,17 @@ Route::get('/series', 'RechercheSerieController@create');
 //Route qui permet de faire le traitement concernant une recherche de série. Cette fonction eest appelé quand l'URL est '/series'
 Route::post('/series', 'RechercheSerieController@store');
 
+//Route qui permet d'afficher le formulaire d'inscription du site. Cette fonction est appellé lorsque l'URL est '/signin'
 Route::get('/signin', 'VisiteurController@signin');
 
+//Route qui permet d'ajouter un nouvel utilisateur dans la base de données. Cette fonction est appellé lorsque l'URL est '/register'
 Route::post('/registrer', 'Auth\RegisterController@register');
 
-Auth::routes();
+//Route qui permet d'afficher le formulaire de connexion du site. Cette fonction est appellé lorsque l'URL est '/login'
+Route::get('/login', 'VisiteurController@login');
 
-Route::get('/home', 'HomeController@index');
+Route::post('/authenticate', 'Auth\LoginController@username');
+
+Route::get('/dasboard', function(){
+   echo "connected";
+});
