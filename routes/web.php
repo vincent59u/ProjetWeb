@@ -15,7 +15,7 @@
 Route::get('/', 'VisiteurController@accueil');
 
 //Route qui appelle le controller qui construit la page à propos du site. Cette fonction est appelée quand l'URL est '/propos'
-Route::get('/propos', 'VisiteurController@propos');
+Route::get('/about', 'VisiteurController@about');
 
 //Route qui permet d'appeler le controller qui construira la page de recherche de séries. Cette fonction eest appelé quand l'URL est '/series'
 Route::get('/series', 'RechercheSerieController@create');
@@ -23,9 +23,9 @@ Route::get('/series', 'RechercheSerieController@create');
 //Route qui permet de faire le traitement concernant une recherche de série. Cette fonction eest appelé quand l'URL est '/series'
 Route::post('/series', 'RechercheSerieController@store');
 
-Route::get('/inscription', 'VisiteurController@inscription');
+Route::get('/signin', 'VisiteurController@signin');
 
-Route::post('/inscription', 'Auth\RegisterController@register');
+Route::post('/registrer', 'Auth\RegisterController@register');
 
 Auth::routes();
 
