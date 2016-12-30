@@ -32,7 +32,7 @@ class RechercheSerieController extends Controller
         //Création d'une variable qui permet de tester la conformité du formulaire
         $validator = null;
         //Switch qui permettra de tester les champs en fonction du type de recherche souhaitée
-        switch($request->recherche){
+        switch($request->search){
             //Si le type de recherche est par nom, on test le champ nom
             case 'N' : {
                 $validator = Validator::make($request->all(), [
@@ -63,7 +63,7 @@ class RechercheSerieController extends Controller
         }else{
             //Sinon on recherche les séries qui correspondent aux critères de l'utilisateur
             $result = null;
-            if($request->recherche == 'N'){
+            if($request->search == 'N'){
                 //On modifie la requête suivant le nombre de résultats souhaité par l'utilisateur
                 if($request->size == 'X'){
                     $result = DB::table('series')->where('name', 'LIKE', '%' . $request->name . '%')->get();
@@ -71,7 +71,7 @@ class RechercheSerieController extends Controller
                     $result = DB::table('series')->where('name', 'LIKE', '%' . $request->name . '%')->limit($request->size)->get();
                 }
             }
-            if($request->recherche == 'G'){
+            if($request->search == 'G'){
                 //On modifie la requête suivant le nombre de résultats souhaité par l'utilisateur
                 if($request->size == 'X'){
                     $result = DB::table('series')->join('seriesgenres', 'series.id', '=', 'series_id')
@@ -84,7 +84,7 @@ class RechercheSerieController extends Controller
                                                  ->limit($request->size)->get();
                 }
             }
-            if($request->recherche == 'R'){
+            if($request->search == 'R'){
                 //On modifie la requête suivant le nombre de résultats souhaité par l'utilisateur
                 if($request->size == 'X'){
                     $result = DB::table('series')->join('seriescreators', 'series.id', '=', 'series_id')
