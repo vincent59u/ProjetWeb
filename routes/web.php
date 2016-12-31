@@ -40,3 +40,6 @@ Route::get('/logout', 'Auth\LoginController@doLogout');
 
 //Route qui permet d'afficher le compte de l'utilisateur. Cette fonction est appelé lorsque l'URL est '/account'
 Route::get('/account', 'ConnectedController@account');
+
+//Route qui permet d'ajouter une série à la liste des séries visionnées par l'utilisateur. Cette fonction est appelé lorsque l'URL est '/addWatchedSerie'
+Route::post('/addWatchedSerie', 'ConnectedController@addWatchedSerie');

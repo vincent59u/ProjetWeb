@@ -33,6 +33,10 @@
                                         <div class="meta">
                                             <ul class="meta-list list-inline">
                                                 <li class="post-time post_date date updated">First air date {!! $r->first_air_date !!}</li>
+                                                <!-- Ajout d'un bouton qui permet, si l'utilisateur est connecté, d'ajouter cette série au séries visionnées  -->
+                                                @if (Auth::check())
+                                                    <input type="submit" class="btn btn-primary" value="Add to watched serie" onclick="addWatchedSerie(this)">
+                                                @endif
                                             </ul><!--//meta-list-->
                                         </div><!--meta-->
                                     </div><!--//content-->
@@ -48,3 +52,7 @@
 
 <!-- Appel du footer commun à tout le site -->
 @include('layouts.footer')
+
+<script>
+
+</script>

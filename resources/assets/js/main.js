@@ -79,3 +79,28 @@ $(document).ready(function() {
         }
     });
 });
+
+/* ======= Crée une requête AJAX qui ajoute une série au séries visionnées ======= */
+function addWatchedSerie(element){
+    //Permet de placer le token de vérification dans l'envoi (évite les 500 internal server error)
+    $.ajaxSetup({
+        headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+    });
+    //Envoi des données via une requête ajax
+    $.ajax({
+        //URL appelée lors de l'envoi de donnée
+        url: 'addWatchedSerie',
+        //Méthode post
+        type: 'post',
+        //Données à transmettre
+        data: {'name':$(element).closest('.post-inner').find('.post-title').text(), '_token': $('input[name=_token]').val()},
+        success: function(data){
+            //Fonction de succès.
+            alert(data);
+        },
+        error: function(){
+            //Fonction d'erreur
+            alert('An error was encountered');
+        }
+    });
+}
