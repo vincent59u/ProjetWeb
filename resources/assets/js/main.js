@@ -78,6 +78,34 @@ $(document).ready(function() {
             $('.name').hide();
         }
     });
+
+
+    $('.synopsis').each(function(event){ /* select all divs with the item class */
+
+        var max_length = 250; /* set the max content length before a read more link will be added */
+
+        if($(this).html().length > max_length){ /* check for content length */
+
+
+            var short_content 	= $(this).html().substr(0,max_length); /* split the content in two parts */
+            var content	= $(this).html();
+
+            $(this).html('<p class="limited_text">'+short_content+'...'+'</p>'+
+                '<p class="more_text" style="display:none;">'+content+'</p>'+
+                '<a id="read" href="#" class="read_more" >Read more &rarr;</a>'); /* Alter the html to allow the read more functionality */
+
+            $(this).find('a.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+                event.preventDefault(); /* prevent the a from changing the url */
+                $(this).hide(); /* hide the read more button */
+                $(this).parents('.synopsis').find('.limited_text').hide(); /* Et on cache le texte partiel*/
+                $(this).parents('.synopsis').find('.more_text').show(); /* show the .more_text span */
+
+            });
+
+        }
+
+    });
 });
 
 /* ======= Crée une requête AJAX qui ajoute une série au séries visionnées ======= */

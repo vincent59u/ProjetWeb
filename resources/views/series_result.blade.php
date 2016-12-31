@@ -26,10 +26,11 @@
                                     </figure><!--//post-thumb-->
                                     <div class="content">
                                         <h3 class="post-title">{!! $r->original_name !!}</h3>
-                                        <div class="post-entry">
-                                            <p class="overview">{!! $r->overview !!}</p>
-                                            <a id="read">Read more &rarr;</a>
+
+                                        <div class="post-entry synopsis">
+                                            {!! $r->overview !!}
                                         </div>
+
                                         <div class="meta">
                                             <ul class="meta-list list-inline">
                                                 <li class="post-time post_date date updated">First air date {!! $r->first_air_date !!}</li>
