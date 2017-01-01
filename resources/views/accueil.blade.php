@@ -16,7 +16,7 @@
 <!-- Partie de texte qui se positione au dessus des images background -->
 <section class="promo section section-on-bg">
     <div class="container text-center">
-        <h2 class="title">Discover new TV series<br />tall based on your preferences!</h2>
+        <h2 class="title">Discover new TV series<br />all based on your preferences!</h2>
         <p class="intro">Our recommandation website<br />be with you in a new experience</p>
         <p><a class="btn btn-cta btn-cta-primary" href="#why">Discover us</a></p>
     </div><!--//container-->
