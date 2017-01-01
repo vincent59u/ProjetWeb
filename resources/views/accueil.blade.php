@@ -27,78 +27,34 @@
     <!-- ******Why Section****** -->
     <section id="why" class="section why">
         <div class="container">
-            <h2 class="title text-center">How Can Velocity Help You?</h2>
-            <p class="intro text-center">We take care of the UX and front-end design so you can save time building your site</p>
+            <h2 class="title text-center">How Can TV Series Help You?</h2>
+            <p class="intro text-center">We take care of your passion for the TV series</p>
             <div class="row item">
                 <div class="content col-xs-12 col-md-4">
-                    <h3 class="title">Save you time and effort</h3>
+                    <h3 class="title">Save you time and effort to discover new series</h3>
                     <div class="desc">
-                        <p>Explain one of your product benefits here. Let users know how they can benefit using your product. It’s also a good idea to back it up with a testimonial or tweet from your users.</p>
-                        <p>The original PSD of the graphic is included in the package. You can easily customise the PSD to meet your needs.</p>
+                        <p>We propose you a unique tool discover nex tv series with our search engine. You can search informations about more 500 series and tv show.</p>
+                        <p>You can search series by differents criterias like the serie's name, the serie's genre or the serie's creator.</p>
+                        <p><a href="series">Go to series section to use our search engine.</a></p>
                     </div>
-                    <div class="quote">
-                        <div class="quote-profile">
-                            <img class="img-responsive img-circle" src="../resources/assets/images/people/profile-s-1.png" alt="" />
-                        </div><!--//profile-->
-                        <div class="quote-content">
-                            <blockquote><p><a href="https://twitter.com/3rdwave_themes" target="_blank">@velocity</a> Love it! Thank you for making my life easier and saving me time! I’ll definitely recommend it to my friends. :)</p></blockquote>
-                            <p class="source">@LisaW, Bristol</p>
-                        </div><!--//quote-content-->
-                    </div><!--//quote-->
                 </div><!--//content-->
                 <figure class="figure col-md-offset-1 col-sm-offset-0 col-xs-offset-0 col-xs-12 col-md-7">
-                    <img class="img-responsive" src="../resources/assets/images/figures/figure-1.png" alt="" />
-                    <figcaption class="figure-caption">(Screenshot: Coral - App &amp; website startup kit) </figcaption>
-                </figure>
-            </div><!--//item-->
-
-            <div class="row item">
-                <div class="content col-md-push-8 col-sm-push-0 col-xs-push-0 col-xs-12 col-md-4">
-                    <h3 class="title">Works across all devices</h3>
-                    <div class="desc">
-                        <p>Explain one of your product benefits here. Let users know how they can benefit using your product. It’s also a good idea to back it up with a testimonial or tweet from your users.</p>
-                        <p>The original PSD of the graphic is included in the package. You can easily customise the PSD to meet your needs.</p>
-                        <p><i class="fa fa-download"></i> <a href="download.html">Download mobile versions</a></p>
-                    </div>
-
-                    <div class="quote">
-                        <div class="quote-profile">
-                            <img class="img-responsive img-circle" src="../resources/assets/images/people/profile-s-2.png" alt="" />
-                        </div><!--//profile-->
-                        <div class="quote-content">
-                            <blockquote><p>I find the mobile app very useful when I'm on the go. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p></blockquote>
-                            <p class="source">@JackT, San Francisco</p>
-                        </div><!--//quote-content-->
-                    </div><!--//quote-->
-                </div><!--//content-->
-                <figure class="figure col-md-pull-4 col-sm-pull-0 col-xs-pull-0 col-xs-12 col-md-7">
-                    <img class="img-responsive" src="../resources/assets/images/figures/figure-2.png" alt="" />
-                    <div class="control text-center">
-                        <button type="button" class="play-trigger" data-toggle="modal" data-target="#modal-video"><i class="fa fa-play"></i></button>
-                    </div><!--//control-->
+                    <img class="img-responsive" src="../resources/assets/images/home/search.png" alt="search engine" />
+                    <figcaption class="figure-caption">(Screenshot: Series search engine powered by TV Series) </figcaption>
                 </figure>
             </div><!--//item-->
 
             <div class="row item ">
                 <div class="content col-xs-12 col-md-4">
-                    <h3 class="title">Easy to customise</h3>
+                    <h3 class="title">Easy to use</h3>
                     <div class="desc">
-                        <p>Explain one of your product benefits here. Let users know how they can benefit using your product. It’s also a good idea to back it up with a testimonial or tweet from your users.</p>
-                        <p>The original PSD of the graphic is included in the package. You can easily customise the PSD to meet your needs.</p>
+                        <p>Our website propose you a great recommandation of new tv series to discover. You can add all series you like and you watch to your account and receive recommandation based on your preferences.</p>
+                        <p>We have to differents system of recommandation. The first is based on your most watches series genres and the second is use the production companies of your watched series..</p>
                     </div>
-                    <div class="quote">
-                        <div class="quote-profile">
-                            <img class="img-responsive img-circle" src="../resources/assets/images/people/profile-s-3.png" alt="" />
-                        </div><!--//profile-->
-                        <div class="quote-content">
-                            <blockquote><p>Nice template! It’s practical and there is no gimmicks. Very easy to customise as well!</p></blockquote>
-                            <p class="source"><a href="#">@AlexD</a>, London</p>
-                        </div><!--//quote-content-->
-                    </div><!--//quote-->
                 </div><!--//content-->
                 <figure class="figure col-md-offset-1 col-sm-offset-0 col-xs-offset-0 col-xs-12 col-md-7">
-                    <img class="img-responsive" src="../resources/assets/images/figures/figure-3.png" alt="" />
-                    <figcaption class="figure-caption">(Screenshot: <a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/?ref=3wm" target="_blank">Tempo - Bootstrap template for startups)</a> </figcaption>
+                    <img class="img-responsive" src="../resources/assets/images/home/recommandation.png" alt="recommandation engine" />
+                    <figcaption class="figure-caption">(Screenshot: Series recommandation engine powered by TV Series)</figcaption>
 
                 </figure>
             </div><!--//item-->
