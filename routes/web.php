@@ -43,3 +43,9 @@ Route::get('/account', 'ConnectedController@account');
 
 //Route qui permet d'ajouter une série à la liste des séries visionnées par l'utilisateur. Cette fonction est appelé lorsque l'URL est '/addWatchedSerie'
 Route::post('/addWatchedSerie', 'ConnectedController@addWatchedSerie');
+
+//Route qui permet de proposer des recommandation de séries basées sur les préférences utilisateur. Cette fonction est appelé lorsque l'URL est '/recommandationGenre'
+Route::post('/recommandationGenre', 'ConnectedController@recommandationGenre');
+
+//Route qui permet de proposer des recommandation de séries basées sur les préférences utilisateur. Cette fonction est appelé lorsque l'URL est '/recommandationCompanies'
+Route::post('/recommandationCompanies', 'ConnectedController@recommandationCompanies');

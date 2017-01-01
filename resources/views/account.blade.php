@@ -19,12 +19,15 @@
                 </div>
                 <div class="col-md-6">
                     <h2>Recommandation of series</h2>
-                    {!! Form::open() !!}
-                    {!! Form::submit('Recommandation by series genre', array('class'=>'btn btn-primary')) !!}
+                        <input type="submit" class="btn btn-primary" value="Recommandation by series genres" onclick="recommandationGenre()">
                     <br><br>
-                    {!! Form::submit('Recommandation by series creator', array('class'=>'btn btn-primary')) !!}
-                    {!! Form::close() !!}
+                        <input type="submit" class="btn btn-primary" value="Recommandation by series companies" onclick="recommandationCompanies()">
                 </div>
+            </div>
+            <!-- Separation -->
+            <br><br>
+            <div class="row col-md-12 recommandation">
+                <!-- Contenu rempli lors d'une demande de recommandation -->
             </div>
         </div>
     </section>

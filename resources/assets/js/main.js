@@ -132,3 +132,85 @@ function addWatchedSerie(element){
         }
     });
 }
+
+/* ======= Crée une requête AJAX afin de faire une recommandation à l'utilisateur ======= */
+function recommandationGenre(){
+    //Permet de placer le token de vérification dans l'envoi (évite les 500 internal server error)
+    $.ajaxSetup({
+        headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+    });
+    //Envoi des données via une requête ajax
+    $.ajax({
+        //URL appelée lors de l'envoi de donnée
+        url: 'recommandationGenre',
+        //Méthode post
+        type: 'post',
+        //Aucune données à transmettre, c'est le retour de la fonction appelée qui nous intéresse ici.
+        data: {},
+        success: function(data){
+            //Fonction de succès.
+            afficheRecommandation(data);
+        },
+        error: function(){
+            //Fonction d'erreur
+            alert('An error was encountered');
+        }
+    });
+}
+
+/* ======= Crée une requête AJAX afin de faire une recommandation à l'utilisateur ======= */
+function recommandationCompanies() {
+    //Permet de placer le token de vérification dans l'envoi (évite les 500 internal server error)
+    $.ajaxSetup({
+        headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
+    });
+    //Envoi des données via une requête ajax
+    $.ajax({
+        //URL appelée lors de l'envoi de donnée
+        url: 'recommandationCompanies',
+        //Méthode post
+        type: 'post',
+        //Aucune données à transmettre, c'est le retour de la fonction appelée qui nous intéresse ici.
+        data: {},
+        success: function (data) {
+            //Fonction de succès.
+            afficheRecommandation(data);
+        },
+        error: function () {
+            //Fonction d'erreur
+            alert('An error was encountered');
+        }
+    });
+}
+
+/* ======= Fonction qui permet d'afficher des recommandations de séries ======= */
+function afficheRecommandation(data){
+    //On vide la div recommandation de la page + on ajoute un titre à la partie
+    $('.recommandation').empty().append(
+        "<div class='col-md-12'>" +
+        "<center><h2>Recommandation of series</h2></center>" +
+        "</div>"
+    );
+    //Pour tous les résultats, on affiche les informations de chaques série afin que l'utilisateur puisse prendre note des recommandations
+    for(var i = 0; i < data.length; i++) {
+        $('.recommandation').append(
+            "<div class='row'>" +
+            "<div class='col-md-3'>" +
+            "<img class='img-responsive' src='https://image.tmdb.org/t/p/original/" + data[i]['backdrop_path'] + "' alt='image' />" +
+            "</div>" +
+            "<div class='col-md-3'>" +
+            "<ul>" +
+            "<li>Name : " + data[i]['original_name'] + "</li>" +
+            "<li>First air date : " + data[i]['first_air_date'] + "</li>" +
+            "<li>Number of seasons : " + data[i]['number_of_seasons'] + "</li>" +
+            "<li>Number of episodes : " + data[i]['number_of_episodes'] + "</li>" +
+            "<li>Original language : " + data[i]['original_language'] + "</li>" +
+            "</ul>" +
+            "</div>" +
+            "<div class='col-md-6'>" +
+            "<p>" + data[i]['overview'] + "</p>" +
+            "</div>" +
+            "</div><br>"
+        );
+    }
+}

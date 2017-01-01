@@ -52,4 +52,72 @@ class ConnectedController extends Controller
             }
         }
     }
+
+    /**
+     * Méthode qui permet de proposé des recommandation à l'utilisateur suivant son genre de série préférée
+     * Récupération de tous les genres de séries regardées par l'utilisateur
+     * Proposition de 3 séries aléatoires.
+     * @return $recommandation
+     */
+    public function recommandationGenre(){
+        //Si la requête AJAX est valide
+        if(Request::ajax()) {
+            //On récupère l'ensemble des genres des séries visionnées par l'utilisateur
+            $genre_user = DB::table('genres')->select('genres.name')
+                                             ->join('seriesgenres', 'genres.id', '=', 'seriesgenres.genre_id')
+                                             ->join('usersseries', 'seriesgenres.series_id', '=', 'usersseries.serie_id')
+                                             ->where('usersseries.user_id', '=', Auth::user()->id)->get();
+            //On crée un tableau intermédiaire afin de pouvoir utiliser la méthode array_count_values
+            $array_genre = array();
+            //On ajoute le nom du genre dans le nouveau tableau, passage d'objet à string
+            foreach($genre_user as $genre){
+                array_push($array_genre, $genre->name);
+            }
+            //On crée un nouveau tableau qui permet de compter le nombre d'apparitions pour chaque genres
+            $count = array_count_values($array_genre);
+            //On trie le tableau
+            arsort($count);
+            //On recherche 3 séries du genre préféré de l'utilisateur. On propose un résultat aléatoire.
+            $recommandation = DB::table('series')->join('seriesgenres', 'series.id', '=', 'seriesgenres.series_id')
+                                                 ->join('genres', 'seriesgenres.genre_id', '=', 'genres.id')
+                                                 ->where('genres.name', '=', key($count))
+                                                 ->inRandomOrder()->limit(3)->get();
+            //On return l'ensemble des résultats à l'utilisateur
+            return $recommandation;
+        }
+    }
+
+    /**
+     * Méthode qui permet de proposé des recommandation à l'utilisateur suivant les compagnies de production des séries qu'il visionne.
+     * Récupération de toustes les compagnies de production de séries regardées par l'utilisateur
+     * Proposition de 3 séries aléatoires suivant les compagnies de production.
+     * @return $recommandation
+     */
+    public function recommandationCompanies(){
+        //Si la requête AJAX est valide
+        if(Request::ajax()) {
+            //On récupère l'ensemble des compagnies de production des séries visionnées par l'utilisateur
+            $companies = DB::table('companies')->select('companies.name')
+                                               ->join('seriescompanies', 'companies.id', '=', 'seriescompanies.company_id')
+                                               ->join('usersseries', 'usersseries.serie_id', '=', 'seriescompanies.series_id')
+                                               ->where('usersseries.user_id', '=', Auth::user()->id)->get();
+            //On crée un tableau intermédiaire afin de pouvoir utiliser la méthode array_count_values
+            $array_companies = array();
+            //On ajoute le nom des compagnies de production dans le nouveau tableau, passage d'objet à string
+            foreach($companies as $c){
+                array_push($array_companies, $c->name);
+            }
+            //On crée un nouveau tableau qui permet de compter le nombre d'apparitions pour chaque compagnie de production
+            $count = array_count_values($array_companies);
+            //On trie le tableau
+            arsort($count);
+            //On recherche 3 séries de la compagnie de production préférée de l'utilisateur. On propose un résultat aléatoire.
+            $recommandation = DB::table('series')->join('seriescompanies', 'series.id', '=', 'seriescompanies.series_id')
+                                                 ->join('companies', 'seriescompanies.company_id', '=', 'companies.id')
+                                                 ->where('companies.name', '=', key($count))
+                                                 ->inRandomOrder()->limit(3)->get();
+            //On return l'ensemble des résultats à l'utilisateur
+            return $recommandation;
+        }
+    }
 }
