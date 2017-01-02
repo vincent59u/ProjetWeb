@@ -16,24 +16,6 @@ $(document).ready(function() {
 
          }
     });
-
-    /* ======= jQuery Placeholder ======= */
-    /* Ref: https://github.com/mathiasbynens/jquery-placeholder */
-    
-    $('input, textarea').placeholder();
-    
-    /* ======= FAQ accordion ======= */
-    function toggleIcon(e) {
-    $(e.target)
-        .prev('.panel-heading')
-        .find('.panel-title a')
-        .toggleClass('active')
-        .find("i.fa")
-        .toggleClass('fa-plus-square fa-minus-square');
-    }
-    $('.panel').on('hidden.bs.collapse', toggleIcon);
-    $('.panel').on('shown.bs.collapse', toggleIcon);    
-    
     
     /* ======= Header Background Slideshow - Flexslider ======= */    
     /* Ref: https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties */
@@ -43,12 +25,6 @@ $(document).ready(function() {
         directionNav: false, //remove the default direction-nav - https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
         controlNav: false, //remove the default control-nav
         slideshowSpeed: 8000
-    });
-    
-     /* ======= Testimonial Bootstrap Carousel ======= */
-     /* Ref: http://getbootstrap.com/javascript/#carousel */
-    $('#testimonials-carousel').carousel({
-      interval: 8000 
     });
 
     /* ======= Construit la page de recherche de séries du site ======= */

@@ -5,7 +5,7 @@
 <div class="headline-bg" style="background-image: url('https://image.tmdb.org/t/p/original<?php echo $image->backdrop_path ?>');">
 </div><!--//headline-bg-->
 
-<!-- Contenu de la page à propos -->
+<!-- Contenu de la page de connexion -->
 <section class="story-section section section-on-bg">
     <h2 class="title container text-center">Log in</h2>
     <div class="story-container container text-center">
@@ -14,7 +14,7 @@
                 <div class="panel-heading">Log in</div>
                 <div class="panel-body">
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    <form class="form-horizontal" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
                         @if(Session::has('message-error'))

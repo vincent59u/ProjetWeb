@@ -5,7 +5,7 @@
 <div class="headline-bg" style="background-image: url('https://image.tmdb.org/t/p/original<?php echo $image->backdrop_path ?>');">
 </div><!--//headline-bg-->
 
-<!-- Contenu de la page à propos -->
+<!-- Contenu de la page d'inscription -->
 <section class="story-section section section-on-bg">
     <h2 class="title container text-center">Sign in</h2>
     <div class="story-container container text-center">
@@ -13,8 +13,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Sign in</div>
                 <div class="panel-body">
-
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                        <form class="form-horizontal" method="POST" action="{{ url('/register') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

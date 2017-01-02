@@ -34,7 +34,7 @@
     </div><!--//footer-content-->
     <div class="bottom-bar">
         <div class="container">
-            <small class="copyright">Copyright &copy VINCENT, SELESEK, LIEFFROY, SCHMITT</small>
+            <small class="copyright">Copyright &copy; VINCENT, SELESEK, LIEFFROY, SCHMITT</small>
         </div><!--//container-->
     </div><!--//bottom-bar-->
 </footer><!--//footer-->
@@ -44,7 +44,6 @@
 <script type="text/javascript" src="../resources/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/assets/plugins/bootstrap-hover-dropdown.min.js"></script>
 <script type="text/javascript" src="../resources/assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
-<script type="text/javascript" src="../resources/assets/plugins/FitVids/jquery.fitvids.js"></script>
 <script type="text/javascript" src="../resources/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="../resources/assets/js/main.js"></script>
 

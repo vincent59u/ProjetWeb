@@ -16,7 +16,6 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="../resources/assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="../resources/assets/plugins/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="../resources/assets/plugins/flexslider/flexslider.css">
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="../resources/assets/css/styles.css">
@@ -34,7 +33,7 @@
         <h1 class="logo">
             <a href="."><span class="text">TV Series</span></a>
         </h1><!--//logo-->
-        <nav class="main-nav navbar-right" role="navigation">
+        <nav class="main-nav navbar-right">
             <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
