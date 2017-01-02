@@ -53,7 +53,3 @@
 
 <!-- Appel du footer commun à tout le site -->
 @include('layouts.footer')
-
-<script>
-
-</script>

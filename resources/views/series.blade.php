@@ -5,13 +5,11 @@
 <div class="headline-bg" style="background-image: url('https://image.tmdb.org/t/p/original<?php echo $image->backdrop_path ?>');">
 </div><!--//headline-bg-->
 
-<!-- Contenu de la page à propos -->
+<!-- Contenu de la page de recherche de série -->
 <section class="story-section section section-on-bg">
     <h2 class="title container text-center">Search for series</h2>
     <div class="story-container container text-center">
-                <div class="story-container-inner">
-            <!-- Description et contenu textuel de la page -->
-
+        <div class="story-container-inner">
             <!-- Ouverture du formulaire de recherche de série -->
             {!! Form::open() !!}
 
@@ -28,7 +26,7 @@
 
             <!-- Choix du type de recherche de série -->
             <div class="form-group">
-                <center>{!! Form::label('Type of search') !!}</center>
+                <label class="label_center">Type of search</label>
                 {!! Form::select('search', ['N' => "By serie's name",
                                                'G' => "By serie's genre",
                                                'R' => "By serie's creator"],
@@ -37,13 +35,13 @@
 
             <!-- Champ de saisie du nom de la série recherchée -->
             <div class="form-group name">
-                <center>{!! Form::label('Name of the series') !!}</center>
+                <label class="label_center">Name of series</label>
                 {!! Form::text('name', null, array('class'=>'form-control', 'placeholder'=>'Name of serie')) !!}
             </div>
 
             <!-- Liste des checkboxs pour la recherche de séries par genre -->
             <div class="form-group genre">
-                <center>{!! Form::label('Name of genre') !!}</center>
+                <label class="label_center">Name of genre</label>
                 <div class="row">
                     <div class="col-md-3">Adventure {!! Form::checkbox('genre[]', 'Adventure') !!}</div>
                     <div class="col-md-3">Fantasy {!! Form::checkbox('genre[]', 'Fantasy') !!}</div>
@@ -89,13 +87,13 @@
 
             <!-- Champ de saisie du nom du réalisateur de la série recherchée -->
             <div class="form-group creator">
-                <center>{!! Form::label('Name of creator') !!}</center>
+                <label class="label_center">Name of creator</label>
                 {!! Form::text('creator', null, array('class'=>'form-control', 'placeholder'=>'Name of creator')) !!}
             </div>
 
             <!-- Choix du nombre de résultats retournés -->
             <div class="form-group">
-                <center>{!! Form::label('Nombre de résultats') !!}</center>
+                <label class="label_center">Number of results</label>
                 {!! Form::select('size', ['10' => '10 returned results',
                                                '20' => '20 returned results',
                                                '50' => '50 returned results',
@@ -105,7 +103,9 @@
             </div>
 
             <!-- Bouton d'envoi du formulaire de recherche de série -->
-            <center>{!! Form::submit('Search', array('class'=>'btn btn-primary')) !!}</center>
+            <div class="input_center">
+                {!! Form::submit('Search', array('class'=>'btn btn-primary input_center')) !!}
+            </div>
             <!-- Fermeture du formulaire de recherche de série -->
             {!! Form::close() !!}
         </div>

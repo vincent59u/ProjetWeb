@@ -3452,3 +3452,14 @@ select {
     padding:10px;
     overflow:hidden;
 }
+
+/* Permet de centrer les <label> des formulaires */
+.label_center{
+    display: block;
+    text-align: center;
+}
+
+/* Permet de centrer les <input> des formulaires */
+.input_center{
+    text-align: center;
+}
