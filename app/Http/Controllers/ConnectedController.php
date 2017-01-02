@@ -54,10 +54,10 @@ class ConnectedController extends Controller
     }
 
     /**
-     * Méthode qui permet de proposé des recommandation à l'utilisateur suivant son genre de série préférée
+     * Méthode qui permet de proposer des recommandations à l'utilisateur suivant son genre de série préférée
      * Récupération de tous les genres de séries regardées par l'utilisateur
      * Proposition de 3 séries aléatoires.
-     * @return $recommandation
+     * @return $recommandation qui est un tableau PHP
      */
     public function recommandationGenre(){
         //Si la requête AJAX est valide
